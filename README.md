@@ -15,5 +15,11 @@ https://trello.com/b/DG6KoIhr/react-web-dev
 
 <img width="1726" alt="Screenshot 2024-05-25 at 9 02 29 PM" src="https://github.com/sametj/tcr-website/assets/102891262/2f397c9a-53e0-43b2-9f79-7e0fdba3e932">
 
+## Figma Board
+
+<img width="1251" alt="Screenshot 2024-05-25 at 9 08 04 PM" src="https://github.com/sametj/tcr-website/assets/102891262/1db77d63-d2a3-48a3-baa2-ff7fe7b3e546">
+
+
+
 
 
