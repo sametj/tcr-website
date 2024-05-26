@@ -17,9 +17,15 @@ You'll be working on your forked versions. If possible create a dev branch which
 
     https://trello.com/b/DG6KoIhr/react-web-dev
 
+
 -   To-do's will be posted on the Trello board
+
+  <img width="290" alt="Screenshot 2024-05-25 at 10 19 47 PM" src="https://github.com/sametj/tcr-website/assets/102891262/daf90270-a520-425e-8de0-cf80a91f5e64">
+
 -   You can pick a task you'd like to do and Mark you name on the card.
 -   Upon completion of the task and the PR has been merged, you can move the card to the completed section.
+  <img width="275" alt="Screenshot 2024-05-25 at 10 20 32 PM" src="https://github.com/sametj/tcr-website/assets/102891262/9da73a44-493a-4c72-aaff-725c08df3aee">
+
 
 ## Future Plans
 
