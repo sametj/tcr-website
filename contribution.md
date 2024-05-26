@@ -26,6 +26,9 @@ You'll be working on your forked versions. If possible create a dev branch which
     <img width="275" alt="Screenshot 2024-05-25 at 10 20 32 PM" src="https://github.com/sametj/tcr-website/assets/102891262/9da73a44-493a-4c72-aaff-725c08df3aee">
 
 -   If you notice any bugs, please post it in the Trello in the bugs channel
+  <img width="278" alt="Screenshot 2024-05-25 at 10 31 27 PM" src="https://github.com/sametj/tcr-website/assets/102891262/05227acc-3b1c-4cc6-8135-620bb5b05bab">
+
+  
 
 ## Future Plans
 
