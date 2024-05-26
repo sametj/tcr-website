@@ -13,6 +13,14 @@ Upon successful installation, you can run the following commandnpm run dev. This
 
 You'll be working on your forked versions. If possible create a dev branch which will be pushed to the main branch of the original repository
 
+## How to contribute
+
+    https://trello.com/b/DG6KoIhr/react-web-dev
+
+-   To-do's will be posted on the Trello board
+-   You can pick a task you'd like to do and Mark you name on the card.
+-   Upon completion of the task and the PR has been merged, you can move the card to the completed section.
+
 ## Future Plans
 
 Depending on how big the project gets, policies on PR's and version control are subjected to changes. If you have any suggestions, feel free to add them to the trello. THANKS!
