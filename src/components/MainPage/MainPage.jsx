@@ -1,10 +1,13 @@
 import React from "react";
 import "./MainPage.scss";
+import FacebookIcon from "/facebook-f.svg";
 
 export const MainPage = () => {
 	return (
 		<>
 			<Header />
+			<MainContent />
+			<Footer />
 		</>
 	);
 };
@@ -48,5 +51,47 @@ const NavBar = () => {
 				</button>
 			))}
 		</nav>
+	);
+};
+
+const SocialIcons = () => {
+	const socialIcons = [FacebookIcon];
+
+	return (
+		<div>
+			{socialIcons.map((icon, index) => (
+				<i>
+					<img
+						key={index}
+						className='socialIcon'
+						src={icon}
+						alt='socialIcon'
+					/>
+				</i>
+			))}
+		</div>
+	);
+};
+
+const MainContent = () => {
+	return <main className='mainContent'></main>;
+};
+
+const Footer = () => {
+	return (
+		<footer className='footer'>
+			<div className='footerLogo'>
+				<img
+					className='logoImage'
+					src='/TCR_transparent.png'
+					alt='logo'
+				/>
+				<span>Unlock your Racing Potential</span>
+			</div>
+			<NavBar />
+			<div className='footerSocial'>
+				<SocialIcons />
+			</div>
+		</footer>
 	);
 };
