@@ -1,94 +1,115 @@
 html,
 body {
-	margin: 0;
-	padding: 0;
-	font-family: "Roboto", sans-serif;
-	background-image: linear-gradient(to bottom, #0d160b, #160e61);
-	background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-image: linear-gradient(to bottom, #0d160b, #160e61);
+  background-attachment: fixed;
 }
 
 .mainHeader {
-	display: flex;
-	background-color: black;
-	padding: 40px;
-	text-align: center;
-	font-size: 1em;
-	font-weight: bold;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  background-color: black;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 90px;
+  padding: 0 20px;
 }
 
 .logoContainer {
-	display: flex;
-	justify-content: center;
-	align-items: flex-end;
+  display: flex;
+  justify-content: center;
 }
 .logoImage {
-	width: 100px;
-	height: 40px;
+  height: 45px;
 }
 
 .textContainer {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .logoText {
-	font-size: 1.5em;
-	margin-left: 20px;
-	color: darkblue;
+  font-size: 1.5em;
+  margin-left: 20px;
+  color: #2a38b4;
+
+  text-transform: uppercase;
+  font-style: italic;
 }
 
 .logoSubText {
-	font-size: 1em;
-	margin-left: 20px;
-	color: rgb(212, 137, 18);
+  font-size: 1em;
+  margin-left: 20px;
+  color: #866b25;
+
+  font-style: italic;
 }
 
 .navBar {
-	display: flex;
-	justify-content: space-between;
-	padding: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navItem {
-	color: white;
-	font-size: 1.2em;
-	margin: 0 10px;
-	background-color: rgb(212, 137, 18);
+  color: white;
+  font-size: 1.2em;
+  margin: 0 10px;
+  background-color: #866b25;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 10px;
+  height: 30px;
+  font-style: italic;
 
-	&:hover {
-		color: black;
-	}
+  &:hover {
+    color: black;
+  }
 }
 
 .mainContent {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .footer {
-	display: flex;
-	position: fixed;
-	width: 100%;
-	bottom: 0;
-	justify-content: space-around;
-	background-color: black;
-	color: white;
-	padding: 10px;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 10px;
+
+  .navItem {
+    background: none;
+
+    &:hover {
+      color: #866b25;
+    }
+  }
 }
 
 .footerLogo {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-	span {
-		color: rgb(212, 137, 18);
-	}
+  span {
+    color: #866b25;
+    font-weight: 700;
+    font-style: italic;
+  }
 }
