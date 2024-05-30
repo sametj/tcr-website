@@ -1,7 +1,6 @@
-import React from "react";
 import "./Home.scss";
 
-export const HomeContent = () => {
+const HomeContent = () => {
 	return (
 		<div className='homeContent'>
 			<img
@@ -13,3 +12,5 @@ export const HomeContent = () => {
 		</div>
 	);
 };
+
+export default HomeContent

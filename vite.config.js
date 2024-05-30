@@ -7,7 +7,6 @@ export default defineConfig({
 	publicDir: "../public",
 	base: "/",
 	plugins: [react()],
-
 	server: {
 		host: true,
 		open: !(
