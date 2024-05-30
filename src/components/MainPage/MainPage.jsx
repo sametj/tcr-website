@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./MainPage.scss";
-import { HomeContent } from "../MainContent/MainContent";
+import { HomeContent } from "../Home/Home";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";

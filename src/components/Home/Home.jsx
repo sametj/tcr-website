@@ -1,5 +1,5 @@
 import React from "react";
-import "./MainContent.scss";
+import "./Home.scss";
 
 export const HomeContent = () => {
 	return (
