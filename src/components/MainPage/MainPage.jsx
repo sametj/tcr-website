@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./MainPage.scss";
-import FacebookIcon from "/facebook-f.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faDiscord } from "@fortawesome/free-brands-svg-icons";
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faTwitch } from "@fortawesome/free-brands-svg-icons";
+import { faTiktok } from "@fortawesome/free-brands-svg-icons";
 
 export const MainPage = () => {
 	return (
@@ -28,48 +35,78 @@ const Header = () => {
 					</span>
 				</div>
 			</div>
-			<NavBar />
+			<SocialMedia />
 		</header>
 	);
 };
 
+const SocialMedia = () => {
+	return (
+		<div className='socialContainer'>
+			<FontAwesomeIcon
+				icon={faFacebookF}
+				size='xl'
+				style={{ color: "#e9e9e9" }}
+			/>
+			<FontAwesomeIcon
+				icon={faTwitter}
+				size='xl'
+				style={{ color: "#e9e9e9" }}
+			/>
+			<FontAwesomeIcon
+				icon={faInstagram}
+				size='xl'
+				style={{ color: "#e9e9e9" }}
+			/>
+			<FontAwesomeIcon
+				icon={faDiscord}
+				size='xl'
+				style={{ color: "#e9e9e9" }}
+			/>
+			<FontAwesomeIcon
+				icon={faYoutube}
+				size='xl'
+				style={{ color: "#e9e9e9" }}
+			/>
+			<FontAwesomeIcon
+				icon={faTwitch}
+				size='xl'
+				style={{ color: "#e9e9e9" }}
+			/>
+			<FontAwesomeIcon
+				icon={faTiktok}
+				style={{ color: "#e9e9e9" }}
+			/>
+		</div>
+	);
+};
+
 const NavBar = () => {
-	const navItems = [
-		{ name: "Home" },
-		{ name: "AboutUs" },
-		{ name: "Info" },
-		{ name: "SignUp" },
-	];
+	const [active, setActive] = React.useState("Home");
+	const navItems = [{ name: "Home" }, { name: "AboutUs" }, { name: "Info" }];
+
+	useEffect(() => {
+		const activeElement = document.getElementById(active);
+		const navItems = document.getElementsByClassName("navItem");
+
+		for (let i = 0; i < navItems.length; i++) {
+			navItems[i].classList.remove("active");
+		}
+		activeElement.classList.add("active");
+	}, [active]);
 
 	return (
 		<nav className='navBar'>
 			{navItems.map((item, index) => (
 				<button
+					onClick={() => setActive(item.name)}
 					key={index}
+					id={item.name}
 					className='navItem'>
 					{item.name}
 				</button>
 			))}
 		</nav>
-	);
-};
-
-const SocialIcons = () => {
-	const socialIcons = [FacebookIcon];
-
-	return (
-		<div>
-			{socialIcons.map((icon, index) => (
-				<i>
-					<img
-						key={index}
-						className='socialIcon'
-						src={icon}
-						alt='socialIcon'
-					/>
-				</i>
-			))}
-		</div>
 	);
 };
 
@@ -80,18 +117,7 @@ const MainContent = () => {
 const Footer = () => {
 	return (
 		<footer className='footer'>
-			<div className='footerLogo'>
-				<img
-					className='logoImage'
-					src='/TCR_transparent.png'
-					alt='logo'
-				/>
-				<span>Unlock your Racing Potential</span>
-			</div>
 			<NavBar />
-			<div className='footerSocial'>
-				<SocialIcons />
-			</div>
 		</footer>
 	);
 };

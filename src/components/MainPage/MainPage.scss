@@ -1,115 +1,128 @@
+:root {
+	--text-color: #bcbcbc;
+	--background-color: #060606;
+	--selected-color: #e9e9e9;
+}
+
 html,
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-  background-image: linear-gradient(to bottom, #0d160b, #160e61);
-  background-attachment: fixed;
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+	background-image: linear-gradient(to bottom, #0d160b, #160e61);
+	background-attachment: fixed;
 }
 
 .mainHeader {
-  display: flex;
-  background-color: black;
-  text-align: center;
-  font-size: 1em;
-  font-weight: bold;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	background-color: var(--background-color);
+	text-align: center;
+	font-size: 1em;
+	font-weight: bold;
+	justify-content: space-between;
+	align-items: center;
 
-  height: 90px;
-  padding: 0 20px;
+	height: 90px;
+	padding: 0 20px;
 }
 
 .logoContainer {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 .logoImage {
-  height: 45px;
+	height: 45px;
 }
 
 .textContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 }
 
 .logoText {
-  font-size: 1.5em;
-  margin-left: 20px;
-  color: #2a38b4;
+	font-size: 1.5em;
+	margin-left: 20px;
+	color: #2a38b4;
+	font-family: Formula1Bold;
 
-  text-transform: uppercase;
-  font-style: italic;
+	text-transform: uppercase;
+	font-style: italic;
 }
 
 .logoSubText {
-  font-size: 1em;
-  margin-left: 20px;
-  color: #866b25;
-
-  font-style: italic;
+	font-size: 1em;
+	margin-left: 20px;
+	color: #866b25;
+	font-family: Formula1Bold;
+	font-style: italic;
 }
 
 .navBar {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .navItem {
-  color: white;
-  font-size: 1.2em;
-  margin: 0 10px;
-  background-color: #866b25;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  padding: 3px 10px;
-  height: 30px;
-  font-style: italic;
+	color: var(--text-color);
+	font-family: "Formula1Bold";
+	font-size: 1.2em;
+	margin: 0 10px;
+	background: none;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	padding: 3px 10px;
+	height: 30px;
 
-  &:hover {
-    color: black;
-  }
+	&:hover {
+		text-decoration: underline #866b25;
+		text-underline-offset: 8px;
+		text-decoration-thickness: 4px;
+		color: #2a38b4;
+	}
+}
+
+.socialContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: fit-content;
+	height: 50px;
+	gap: 20px;
 }
 
 .mainContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
 }
 
 .footer {
-  display: flex;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  justify-content: space-around;
-  align-items: center;
-  background-color: black;
-  color: white;
-  padding: 10px;
-
-  .navItem {
-    background: none;
-
-    &:hover {
-      color: #866b25;
-    }
-  }
+	display: flex;
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	bottom: 0;
+	justify-content: space-around;
+	align-items: center;
+	background-color: var(--background-color);
+	color: var(--text-color);
+	padding: 10px;
 }
 
 .footerLogo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 
-  span {
-    color: #866b25;
-    font-weight: 700;
-    font-style: italic;
-  }
+.active {
+	color: var(--selected-color);
+	text-decoration: underline #866b25;
+	text-underline-offset: 8px;
+	text-decoration-thickness: 4px;
 }
