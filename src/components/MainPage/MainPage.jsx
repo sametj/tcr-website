@@ -114,8 +114,7 @@ const NavBar = () => {
 const MainContent = () => {
 	return (
 		<main className='mainContent'>
-			{" "}
-			<HomeContent />{" "}
+			<HomeContent />
 		</main>
 	);
 };
