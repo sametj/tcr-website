@@ -1,0 +1,25 @@
+.homeContent {
+	display: flex;
+	flex-direction: column;
+	height: 80vh;
+	font-size: 1.5rem;
+	font-weight: 600;
+	text-align: center;
+
+	img {
+		width: 100%;
+		height: 50vh;
+		border-radius: 5px;
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
+	}
+
+	h1 {
+		font-family: Formula1Bold;
+		word-spacing: 0.1em;
+		color: green;
+	}
+	h2 {
+		font-family: Formula1Bold;
+		color: #bcbcbc;
+	}
+}

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./MainPage.scss";
+import { HomeContent } from "../MainContent/MainContent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
@@ -83,7 +84,7 @@ const SocialMedia = () => {
 
 const NavBar = () => {
 	const [active, setActive] = React.useState("Home");
-	const navItems = [{ name: "Home" }, { name: "AboutUs" }, { name: "Info" }];
+	const navItems = [{ name: "Home" }, { name: "About" }, { name: "Info" }];
 
 	useEffect(() => {
 		const activeElement = document.getElementById(active);
@@ -111,7 +112,12 @@ const NavBar = () => {
 };
 
 const MainContent = () => {
-	return <main className='mainContent'></main>;
+	return (
+		<main className='mainContent'>
+			{" "}
+			<HomeContent />{" "}
+		</main>
+	);
 };
 
 const Footer = () => {
