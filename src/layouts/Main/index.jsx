@@ -69,7 +69,7 @@ const NavBar = () => {
     {
       name: "Info",
       to: "/info",
-      Children: [
+      children: [
         {
           name: "Schedule",
           to: "/info/schedule",
@@ -93,24 +93,24 @@ const NavBar = () => {
   return (
     <nav className="navBar">
       {navItems.map((item, index) => {
-        if (item.Children) {
+        if (item.children) {
           return (
             <Link
               to={item.to}
               key={index}
               id={item.name}
-              className={classnames("navItem", {
+              className={classnames("nav-item-hover", {
                 active: location.pathname === item.to,
               })}
             >
               {item.name}
               <div className="subNav">
-                {item.Children.map((child, index) => (
+                {item.children.map((child, index) => (
                   <Link
                     to={child.to}
                     key={index}
                     id={child.name}
-                    className={classnames("navItem", {
+                    className={classnames("sub-nav-item", {
                       active: location.pathname === child.to,
                     })}
                   >
