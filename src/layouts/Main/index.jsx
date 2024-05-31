@@ -105,7 +105,7 @@ const NavBar = () => {
             >
               {item.name}
               <div className="subNav">
-                {item.Children.map((child, index) => (
+                {item.children.map((child, index) => (
                   <Link
                     to={child.to}
                     key={index}
