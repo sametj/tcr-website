@@ -11,6 +11,8 @@ import { faTwitch } from "@fortawesome/free-brands-svg-icons";
 import { faTiktok } from "@fortawesome/free-brands-svg-icons";
 
 import "./MainPage.scss";
+import "./Navbar.scss";
+import "./Logo.scss";
 import { Children } from "react";
 
 const Header = () => {
@@ -61,7 +63,6 @@ const SocialMedia = () => {
 
 const NavBar = () => {
 	const location = useLocation();
-	console.log(location);
 
 	const navItems = [
 		{
