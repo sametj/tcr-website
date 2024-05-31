@@ -1,34 +1,46 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Faq.scss";
 
 const BUTTONS = [
   {
     buttonText: "All-Star Race",
+    content: "nush20",
+  },
+  {
+    buttonText: "TCR-Grand Prix",
+    content: "nush30",
+  },
+  {
+    buttonText: "Pre-season Testing",
+    content: "nush40",
+  },
+  {
+    buttonText: "Teammate/Car Selection",
+    content: "nush50",
   },
 ];
 
 const Faq = () => {
-  const [content, setContent] = useState("1");
+  const [content, setContent] = useState(BUTTONS[0].content);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleButtonClick = (newContent) => {
+  const handleButtonClick = (newContent, index) => {
     setContent(newContent);
+    setActiveIndex(index);
   };
 
   return (
     <section className="section-faq">
       <div className="faq-buttons">
-        <button className="faq-button" onClick={() => handleButtonClick("1")}>
-          1
-        </button>
-        <button className="faq-button" onClick={() => handleButtonClick("2")}>
-          2
-        </button>
-        <button className="faq-button" onClick={() => handleButtonClick("3")}>
-          3
-        </button>
-        <button className="faq-button" onClick={() => handleButtonClick("4")}>
-          4
-        </button>
+        {BUTTONS.map((btn, i) => (
+          <button
+            key={i}
+            className={`faq-button ${activeIndex === i ? "faq-active" : ""}`}
+            onClick={() => handleButtonClick(btn.content, i)}
+          >
+            {btn.buttonText}
+          </button>
+        ))}
       </div>
 
       <div className="faq-content">{content}</div>
