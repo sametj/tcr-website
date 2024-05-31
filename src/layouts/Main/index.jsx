@@ -1,6 +1,6 @@
-import { Link, Outlet, useLocation } from "react-router-dom"
+import { Link, Outlet, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import classnames from "classnames"
+import classnames from "classnames";
 
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
@@ -42,7 +42,7 @@ const SocialMedia = () => {
 		faYoutube,
 		faTwitch,
 		faTiktok,
-	]
+	];
 
 	return (
 		<div className='socialContainer'>
@@ -58,40 +58,38 @@ const SocialMedia = () => {
 };
 
 const NavBar = () => {
-	const location = useLocation()
-	console.log(location)
+	const location = useLocation();
+	console.log(location);
 
 	const navItems = [
 		{
 			name: "Home",
 			to: "/",
-		}, 
+		},
 		{
 			name: "About",
 			to: "/about",
-		}, 
+		},
 		{
 			name: "Info",
 			to: "/info",
-		}
+		},
 	];
 
 	return (
 		<nav className='navBar'>
 			{navItems.map((item, index) => {
-
 				return (
 					<Link
 						to={item.to}
 						key={index}
 						id={item.name}
 						className={classnames("navItem", {
-							"active": location.pathname === item.to,
-						})}
-					>
+							active: location.pathname === item.to,
+						})}>
 						{item.name}
 					</Link>
-				)
+				);
 			})}
 		</nav>
 	);
@@ -106,13 +104,13 @@ const Footer = () => {
 };
 
 const Layout = () => {
-  return (
-    <>
-      <Header />
-      <Outlet />
-      <Footer />
-    </>
-  )
-}
+	return (
+		<div className='mainContainer'>
+			<Header />
+			<Outlet />
+			<Footer />
+		</div>
+	);
+};
 
-export default Layout
+export default Layout;

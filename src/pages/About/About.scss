@@ -1,0 +1,26 @@
+.aboutContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 80vh;
+}
+
+.aboutContent {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 80%;
+	height: 80%;
+	border: 2px solid #2a38b481;
+	border-radius: 5px;
+	background-image: linear-gradient(#2a38b4 0%, #12184e 100%);
+	padding: 20px;
+	color: white;
+
+	p {
+		font-size: 2rem;
+		font-weight: 600;
+		text-align: center;
+	}
+}
