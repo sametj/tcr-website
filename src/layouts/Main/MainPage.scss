@@ -76,8 +76,7 @@ body {
 .subNav {
   visibility: hidden;
   opacity: 0;
-  z-index: -10;
-  transition: all 0.5s;
+  transition: all 0.2s;
   position: absolute;
   background-color: #222;
   height: min-content;
@@ -86,7 +85,7 @@ body {
   justify-content: center;
   width: min(300px, 400px);
   padding: 20px;
-  // bottom: 0;
+  bottom: 0;
   left: 50%;
   border-radius: 20px;
   transform: translateX(-50%);
@@ -95,7 +94,6 @@ body {
 
 .navItem {
   position: relative;
-  z-index: 10;
   text-decoration: none;
   color: var(--text-color);
   font-family: "Formula1Bold";
@@ -107,7 +105,11 @@ body {
   border-radius: 5px;
   padding: 3px 10px 20px;
   border-bottom: 5px solid transparent;
-  transition: all 2s;
+  transition: all 0.2s;
+}
+
+.nav-item-hover {
+  @extend .navItem;
 
   &:hover {
     border-bottom: 5px solid #2a38b481;
@@ -118,9 +120,13 @@ body {
       opacity: 1;
       bottom: 100%;
       left: 50%;
-      z-index: 1;
     }
   }
+}
+
+.sub-nav-item {
+  @extend .navItem;
+  transition: 0s;
 }
 
 .socialContainer {
