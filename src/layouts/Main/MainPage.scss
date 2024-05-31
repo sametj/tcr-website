@@ -5,23 +5,6 @@
 	--gold-color: #866b25;
 }
 
-@font-face {
-	font-family: "Formula1Black";
-	src: url(./fonts/Formula1-Black.ttf);
-}
-@font-face {
-	font-family: "Formula1Bold";
-	src: url(./fonts/Formula1-Bold.ttf);
-}
-@font-face {
-	font-family: "Formula1Regular";
-	src: url(./fonts/Formula1-Regular.ttf);
-}
-@font-face {
-	font-family: "Formula1Wide";
-	src: url(./fonts/Formula1-Wide.ttf);
-}
-
 html,
 body {
 	margin: 0;
@@ -128,7 +111,6 @@ body {
 	justify-content: center;
 	align-items: center;
 	padding: 20px;
-
 	margin-top: 100px;
 	height: 70vh;
 }
@@ -153,6 +135,10 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+.subNav {
+	// display: none;
 }
 
 .active {

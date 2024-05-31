@@ -11,6 +11,7 @@ import { faTwitch } from "@fortawesome/free-brands-svg-icons";
 import { faTiktok } from "@fortawesome/free-brands-svg-icons";
 
 import "./MainPage.scss";
+import { Children } from "react";
 
 const Header = () => {
 	return (
@@ -46,8 +47,9 @@ const SocialMedia = () => {
 
 	return (
 		<div className='socialContainer'>
-			{icons.map((icon) => (
+			{icons.map((icon, index) => (
 				<FontAwesomeIcon
+					key={index}
 					icon={icon}
 					size='xl'
 					style={{ color: "#e9e9e9" }}
@@ -73,12 +75,45 @@ const NavBar = () => {
 		{
 			name: "Info",
 			to: "/info",
+			Children: [
+				{
+					name: "Schedule",
+					to: "/info/schedule",
+				},
+			],
 		},
 	];
 
 	return (
 		<nav className='navBar'>
 			{navItems.map((item, index) => {
+				if (item.Children) {
+					return (
+						<Link
+							to={item.to}
+							key={index}
+							id={item.name}
+							className={classnames("navItem", {
+								active: location.pathname === item.to,
+							})}>
+							{item.name}
+							<div className='subNav'>
+								{item.Children.map((child, index) => (
+									<Link
+										to={child.to}
+										key={index}
+										id={child.name}
+										className={classnames("navItem", {
+											active:
+												location.pathname === child.to,
+										})}>
+										{child.name}
+									</Link>
+								))}
+							</div>
+						</Link>
+					);
+				}
 				return (
 					<Link
 						to={item.to}
