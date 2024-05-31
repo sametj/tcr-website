@@ -5,8 +5,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainLayout from "./layouts/Main";
 import HomePage from "./pages/Home";
 import AboutPage from "./pages/About";
-import Info from "./pages/Info";
-import Schedule from "./pages/Info/Schedule";
+import Schedule from "./pages/Schedule";
+import Faq from "./pages/Faq";
+import Stats from "./pages/Stats";
+import Rules from "./pages/Rules";
 import "./Main.scss";
 
 const router = createBrowserRouter([
@@ -23,11 +25,23 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/info",
-				element: <Info />,
+				element: <Schedule />,
 			},
 			{
 				path: "/info/schedule",
 				element: <Schedule />,
+			},
+			{
+				path: "/info/faq",
+				element: <Faq />,
+			},
+			{
+				path: "/info/stats",
+				element: <Stats />,
+			},
+			{
+				path: "/info/rules",
+				element: <Rules />,
 			},
 		],
 	},
