@@ -1,10 +1,3 @@
-:root {
-	--text-color: #bcbcbc;
-	--navbar-color: #060606;
-	--selected-color: #e9e9e9;
-	--gold-color: #866b25;
-}
-
 html,
 body {
 	margin: 0;
@@ -19,6 +12,8 @@ body {
 .mainContainer {
 	display: flex;
 	flex-direction: column;
+	width: 100%;
+	height: 90vh;
 	margin: 0 auto;
 	max-width: 1800px;
 }
@@ -36,105 +31,6 @@ body {
 	padding: 0 20px;
 }
 
-.logoContainer {
-	display: flex;
-	justify-content: center;
-}
-.logoImage {
-	height: 45px;
-}
-
-.textContainer {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-}
-
-.logoText {
-	font-size: 1.5em;
-	margin-left: 20px;
-	color: #2a38b4;
-	font-family: Formula1Bold;
-
-	text-transform: uppercase;
-	font-style: italic;
-}
-
-.logoSubText {
-	font-size: 1em;
-	margin-left: 20px;
-	color: var(--gold-color);
-	font-family: Formula1Bold;
-	font-style: italic;
-}
-
-.navBar {
-	display: flex;
-	justify-content: space-between;
-}
-
-.subNav {
-	visibility: hidden;
-	opacity: 0;
-	transition: all 0.2s;
-	position: absolute;
-	background-color: #222;
-	height: min-content;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: min(300px, 400px);
-	padding: 20px;
-	bottom: 0;
-	left: 50%;
-	border-radius: 20px;
-	transform: translateX(-50%);
-	text-align: center;
-}
-
-.navItem {
-	position: relative;
-	text-decoration: none;
-	color: var(--text-color);
-	font-family: "Formula1Bold";
-	font-size: 1.8rem;
-	margin: 0 10px;
-	background: none;
-	cursor: pointer;
-	border: none;
-	border-radius: 5px;
-	padding: 3px 10px 20px;
-	border-bottom: 5px solid transparent;
-	transition: all 0.2s;
-}
-
-.nav-item-hover {
-	@extend .navItem;
-
-	&:hover {
-		border-bottom: 5px solid #2a38b481;
-		border-radius: 0;
-
-		.subNav {
-			visibility: visible;
-			opacity: 1;
-			bottom: 100%;
-			left: 50%;
-		}
-	}
-}
-
-.sub-nav-item {
-	@extend .navItem;
-	transition: 0s;
-
-	&:hover {
-		border-bottom: 5px solid #2a38b481;
-		border-radius: 0;
-	}
-}
-
 .socialContainer {
 	display: flex;
 	justify-content: center;
@@ -142,16 +38,6 @@ body {
 	width: fit-content;
 	height: 50px;
 	gap: 20px;
-}
-
-.mainContent {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 20px;
-	margin-top: 100px;
-	height: 70vh;
 }
 
 .footer {
@@ -167,13 +53,6 @@ body {
 	background-color: var(--navbar-color);
 	color: var(--text-color);
 	padding: 10px;
-}
-
-.footerLogo {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 }
 
 .active {

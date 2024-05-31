@@ -1,0 +1,30 @@
+.logoContainer {
+	display: flex;
+	justify-content: center;
+}
+.logoImage {
+	height: 45px;
+}
+
+.textContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.logoText {
+	font-size: 1.5em;
+	margin-left: 20px;
+	color: #2a38b4;
+	font-family: Formula1Bold;
+
+	text-transform: uppercase;
+	font-style: italic;
+}
+
+.logoSubText {
+	font-size: 1em;
+	margin-left: 20px;
+	color: var(--gold-color);
+	font-family: Formula1Bold;
+	font-style: italic;
+}
