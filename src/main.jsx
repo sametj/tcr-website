@@ -6,7 +6,7 @@ import MainLayout from "./layouts/Main";
 import HomePage from "./pages/Home";
 import AboutPage from "./pages/About";
 import Schedule from "./pages/Schedule";
-import Faq from "./pages/Faq";
+import Faq from "./pages/FAQ";
 import Stats from "./pages/Stats";
 import Rules from "./pages/Rules";
 import "./Main.scss";

@@ -1,0 +1,81 @@
+.stats-container {
+	display: flex;
+	width: min(1600px, 100%);
+	height: 100%;
+	gap: 40px;
+}
+
+.nav-buttons {
+	display: flex;
+	width: 30%;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.nav-button {
+	width: 100%;
+	padding: 30px 20px;
+	background: rgba(42, 56, 180, 1);
+	font-family: "Formula1Regular";
+	line-height: 28.13px;
+	color: white;
+	border-radius: var(--border-radius);
+	font-size: 24px;
+	font-weight: 900;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.sub-content-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	flex: 2;
+	gap: 20px;
+}
+
+.sub-btn-container {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	gap: 20px;
+}
+.sub-button {
+	width: 100%;
+	padding: 15px 20px;
+	background-color: transparent;
+	font-family: "Formula1Regular";
+	line-height: 28.13px;
+	color: white;
+	border: 2px solid #2a38b481;
+	border-radius: 5px;
+	font-size: 24px;
+	font-weight: 900;
+	outline: none;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.content {
+	display: flex;
+	justify-content: center;
+	width: min(1600px, 100%);
+	height: 100%;
+	border: 2px solid #2a38b481;
+	border-radius: 5px;
+	background: var(--background);
+	padding: 20px;
+	color: white;
+}
+
+.navButtonActive {
+	background-color: rgba(218, 223, 232, 1);
+	color: rgba(42, 56, 180, 1);
+}
+
+.activeSubBtn {
+	background: rgba(42, 56, 180, 0.15);
+}
