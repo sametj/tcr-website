@@ -6,6 +6,11 @@
 	--border-radius: 5px;
 	--padding: 40px;
 	--border: 2px solid #2a38b481;
+	--background: linear-gradient(
+		180deg,
+		rgba(42, 56, 180, 0.4) 0%,
+		rgba(18, 24, 78, 0.4) 100%
+	);
 }
 
 @font-face {
@@ -86,4 +91,14 @@ h6 {
 #root,
 #__next {
 	isolation: isolate;
+}
+
+.active {
+	color: var(--selected-color);
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 5px solid #2a38b4;
+	padding-bottom: 20px;
+	border-radius: 0;
 }
