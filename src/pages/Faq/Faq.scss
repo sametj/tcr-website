@@ -1,46 +1,46 @@
 .section-faq {
-  display: flex;
-  width: min(1600px, 100%);
-  justify-content: center;
-  gap: 50px;
-  margin: 50px auto;
-  color: white;
+	display: flex;
+	width: min(1600px, 100%);
+	justify-content: center;
+	gap: 50px;
+	margin: 50px auto;
+	color: white;
 }
 .faq-buttons {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }
 .faq-button {
-  width: 100%;
-  padding: 30px 20px;
-  background: rgba(42, 56, 180, 1);
-  font-family: "Formula1Regular";
-  line-height: 28.13px;
-  color: white;
-  border-radius: 5px;
-  font-size: 24px;
-  font-weight: 900;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
+	width: 100%;
+	padding: 30px 20px;
+	background: rgba(42, 56, 180, 1);
+	font-family: "Formula1Regular";
+	line-height: 28.13px;
+	color: white;
+	border-radius: 5px;
+	font-size: 24px;
+	font-weight: 900;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
 }
 
 .faq-content {
-  background: linear-gradient(
-    180deg,
-    rgba(42, 56, 180, 0.4) 0%,
-    rgba(18, 24, 78, 0.4) 100%
-  );
-  border: 1px solid rgba(218, 223, 232, 1);
-  width: 60%;
-  height: 700px;
-  padding: 30px;
-  border-radius: 20px;
+	background: linear-gradient(
+		180deg,
+		rgba(42, 56, 180, 0.4) 0%,
+		rgba(18, 24, 78, 0.4) 100%
+	);
+	border: 1px solid rgba(218, 223, 232, 1);
+	width: 60%;
+	height: 700px;
+	padding: 30px;
+	border-radius: 20px;
 }
 .faq-active {
-  background-color: rgba(218, 223, 232, 1);
-  color: rgba(42, 56, 180, 1);
+	background-color: rgba(218, 223, 232, 1);
+	color: rgba(42, 56, 180, 1);
 }

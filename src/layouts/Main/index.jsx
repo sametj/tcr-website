@@ -155,7 +155,9 @@ const Layout = () => {
 	return (
 		<div className='mainContainer'>
 			<Header />
-			<Outlet />
+			<div className='content-container'>
+				<Outlet />
+			</div>
 			<Footer />
 		</div>
 	);

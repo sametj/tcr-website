@@ -18,6 +18,17 @@ body {
 	max-width: 1800px;
 }
 
+.content-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: var(--padding);
+	width: 100%;
+	height: 100%;
+	border: var(--border);
+}
+
 .mainHeader {
 	display: flex;
 	background-color: var(--navbar-color);
