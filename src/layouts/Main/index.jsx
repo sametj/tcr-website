@@ -44,7 +44,7 @@ const SocialMedia = () => {
 		faDiscord,
 		faYoutube,
 		faTwitch,
-		faTiktok,
+		// faTiktok,
 	];
 
 	return (
@@ -95,6 +95,10 @@ const NavBar = () => {
 				},
 			],
 		},
+		// {
+		// 	name: "Shop",
+		// 	to: "https://gamersapparel.co.uk/store/trinity-competitive-racing",
+		// },
 	];
 
 	return (
