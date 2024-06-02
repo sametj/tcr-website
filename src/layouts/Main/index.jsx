@@ -11,6 +11,9 @@ import { faTwitch } from "@fortawesome/free-brands-svg-icons";
 import { faTiktok } from "@fortawesome/free-brands-svg-icons";
 
 import "./MainPage.scss";
+import "./Navbar.scss";
+import "./Logo.scss";
+import { Children } from "react";
 
 const Header = () => {
 	return (
@@ -46,8 +49,9 @@ const SocialMedia = () => {
 
 	return (
 		<div className='socialContainer'>
-			{icons.map((icon) => (
+			{icons.map((icon, index) => (
 				<FontAwesomeIcon
+					key={index}
 					icon={icon}
 					size='xl'
 					style={{ color: "#e9e9e9" }}
@@ -59,7 +63,6 @@ const SocialMedia = () => {
 
 const NavBar = () => {
 	const location = useLocation();
-	console.log(location);
 
 	const navItems = [
 		{
@@ -73,18 +76,63 @@ const NavBar = () => {
 		{
 			name: "Info",
 			to: "/info",
+			children: [
+				{
+					name: "Schedule",
+					to: "/info/schedule",
+				},
+				{
+					name: "FAQ",
+					to: "/info/faq",
+				},
+				{
+					name: "Stats",
+					to: "/info/stats",
+				},
+				{
+					name: "Rules",
+					to: "/info/rules",
+				},
+			],
 		},
 	];
 
 	return (
 		<nav className='navBar'>
 			{navItems.map((item, index) => {
+				if (item.children) {
+					return (
+						<Link
+							to={item.to}
+							key={index}
+							id={item.name}
+							className={classnames("nav-item-hover", {
+								active: location.pathname === item.to,
+							})}>
+							{item.name}
+							<div className='subNav'>
+								{item.children.map((child, index) => (
+									<Link
+										to={child.to}
+										key={index}
+										id={child.name}
+										className={classnames("sub-nav-item", {
+											active:
+												location.pathname === child.to,
+										})}>
+										{child.name}
+									</Link>
+								))}
+							</div>
+						</Link>
+					);
+				}
 				return (
 					<Link
 						to={item.to}
 						key={index}
 						id={item.name}
-						className={classnames("navItem", {
+						className={classnames("nav-item-hover", {
 							active: location.pathname === item.to,
 						})}>
 						{item.name}
@@ -107,7 +155,9 @@ const Layout = () => {
 	return (
 		<div className='mainContainer'>
 			<Header />
-			<Outlet />
+			<div className='content-container'>
+				<Outlet />
+			</div>
 			<Footer />
 		</div>
 	);
