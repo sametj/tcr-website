@@ -2,7 +2,7 @@ import "./About.scss";
 import "./MobileAbout.scss";
 const About = () => {
 	return (
-		<div className='aboutContainer'>
+		<section className='aboutContainer'>
 			<div className='aboutContent'>
 				<p>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -19,7 +19,7 @@ const About = () => {
 					reprehenderit atque ab eveniet dignissimos. Soluta, nisi.
 				</p>
 			</div>
-		</div>
+		</section>
 	);
 };
 

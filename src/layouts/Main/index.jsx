@@ -299,13 +299,13 @@ const MobileNav = ({ menuActive, setMenuActive }) => {
 
 const Layout = () => {
 	return (
-		<div className='mainContainer'>
+		<main className='mainContainer'>
 			<Header />
-			<div className='content-container'>
+			<section className='content-container'>
 				<Outlet />
-			</div>
+			</section>
 			<Footer />
-		</div>
+		</main>
 	);
 };
 

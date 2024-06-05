@@ -1,12 +1,16 @@
 import "./Stats.scss";
-import { useState } from "react";
+import "./MobileStats.scss";
+import { useEffect, useState } from "react";
 import { BUTTONS } from "./Contents";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLessThan, faGreaterThan } from "@fortawesome/free-solid-svg-icons";
 import classNames from "classnames";
 
 const Stats = () => {
-	const [navButton, setNavButton] = useState(BUTTONS[0]);
-	const [content, setContent] = useState(navButton.subButtons[0].content);
 	const [activeIndex, setActiveIndex] = useState(0);
+	const [mainButtonIndex, setMainButtonIndex] = useState(0);
+	const [navButton, setNavButton] = useState(BUTTONS[mainButtonIndex]);
+	const [content, setContent] = useState(navButton.subButtons[0].content);
 
 	const handleNavButtonClick = (btn) => {
 		setNavButton(btn);
@@ -19,8 +23,72 @@ const Stats = () => {
 		setContent(newContent);
 	};
 
+	const leftButtonClick = () => {
+		if (mainButtonIndex === 0) {
+			setActiveIndex(0);
+			setMainButtonIndex(BUTTONS.length - 1);
+		} else {
+			setActiveIndex(0);
+			setMainButtonIndex(mainButtonIndex - 1);
+		}
+	};
+
+	const rightButtonClick = () => {
+		if (mainButtonIndex === BUTTONS.length - 1) {
+			setActiveIndex(0);
+			setMainButtonIndex(0);
+		} else {
+			setActiveIndex(0);
+			setMainButtonIndex(mainButtonIndex + 1);
+		}
+	};
+
+	const leftNavButtonClick = () => {
+		if (activeIndex === 0) {
+			setActiveIndex(navButton.subButtons.length - 1);
+		} else {
+			setActiveIndex(activeIndex - 1);
+		}
+	};
+
+	const rightNavButtonClick = () => {
+		if (activeIndex === navButton.subButtons.length - 1) {
+			setActiveIndex(0);
+		} else {
+			setActiveIndex(activeIndex + 1);
+		}
+	};
+
+	useEffect(() => {
+		setNavButton(BUTTONS[mainButtonIndex]);
+		setContent(BUTTONS[mainButtonIndex].subButtons[0].content);
+	}, [mainButtonIndex]);
+
 	return (
-		<div className='stats-container'>
+		<section className='stats-container'>
+			<div className='mobile-stats-buttons'>
+				<button
+					onClick={leftButtonClick}
+					className='mobile-arrow'>
+					<FontAwesomeIcon
+						icon={faLessThan}
+						size='2xl'
+						style={{ color: "#2a38b481" }}
+					/>
+				</button>
+
+				<span className='mobile-button'>{navButton.buttonText}</span>
+
+				<button
+					onClick={rightButtonClick}
+					className='mobile-arrow'>
+					<FontAwesomeIcon
+						icon={faGreaterThan}
+						size='2xl'
+						style={{ color: "#2a38b481" }}
+					/>
+				</button>
+			</div>
 			<div className='nav-buttons'>
 				{BUTTONS.map((btn, i) => (
 					<button
@@ -46,9 +114,38 @@ const Stats = () => {
 						</button>
 					))}
 				</div>
-				<div className='content'>{content}</div>
+				<div className='content'>
+					<div className='sub-stats-mobile-nav'>
+						<button
+							onClick={leftNavButtonClick}
+							className='mobile-arrow'>
+							<FontAwesomeIcon
+								icon={faLessThan}
+								size='2xl'
+								style={{ color: "#e6e6e6" }}
+							/>
+						</button>
+
+						<span className='mobile-stats-button'>
+							{navButton.subButtons[activeIndex].buttonText}
+						</span>
+
+						<button
+							onClick={rightNavButtonClick}
+							className='mobile-arrow'>
+							<FontAwesomeIcon
+								icon={faGreaterThan}
+								size='2xl'
+								style={{ color: "#e6e6e6" }}
+							/>
+						</button>
+					</div>
+					<div className='content-div'>
+						{navButton.subButtons[activeIndex].content}
+					</div>
+				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
 

@@ -91,3 +91,15 @@
 	width: 0;
 	overflow: hidden;
 }
+
+.mobile-hamburger {
+	@media (max-width: 800px) {
+		display: block;
+	}
+}
+
+.footer-socials {
+	@media (max-width: 800px) {
+		display: flex;
+	}
+}

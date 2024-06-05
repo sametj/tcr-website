@@ -44,6 +44,7 @@ body {
 }
 
 .socialContainer {
+	order: 2;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -66,4 +67,12 @@ body {
 	background-color: var(--navbar-color);
 	color: var(--text-color);
 	padding: 10px;
+}
+
+.mobile-hamburger {
+	display: none;
+}
+
+.footer-socials {
+	display: none;
 }

@@ -9,46 +9,46 @@ import Schedule from "./pages/Schedule";
 import Stats from "./pages/Stats";
 import Rules from "./pages/Rules";
 import "./Main.scss";
-import Faq from "./pages/Faq/Faq";
+import Faq from "./pages/FAQ";
 
 const router = createBrowserRouter([
-  {
-    element: <MainLayout />,
-    children: [
-      {
-        path: "/",
-        element: <HomePage />,
-      },
-      {
-        path: "/about",
-        element: <AboutPage />,
-      },
-      {
-        path: "/info",
-        element: <Schedule />,
-      },
-      {
-        path: "/info/schedule",
-        element: <Schedule />,
-      },
-      {
-        path: "/info/faq",
-        element: <Faq />,
-      },
-      {
-        path: "/info/stats",
-        element: <Stats />,
-      },
-      {
-        path: "/info/rules",
-        element: <Rules />,
-      },
-    ],
-  },
+	{
+		element: <MainLayout />,
+		children: [
+			{
+				path: "/",
+				element: <HomePage />,
+			},
+			{
+				path: "/about",
+				element: <AboutPage />,
+			},
+			{
+				path: "/info",
+				element: <Schedule />,
+			},
+			{
+				path: "/info/schedule",
+				element: <Schedule />,
+			},
+			{
+				path: "/info/faq",
+				element: <Faq />,
+			},
+			{
+				path: "/info/stats",
+				element: <Stats />,
+			},
+			{
+				path: "/info/rules",
+				element: <Rules />,
+			},
+		],
+	},
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+	<React.StrictMode>
+		<RouterProvider router={router} />
+	</React.StrictMode>
 );
