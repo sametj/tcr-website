@@ -1,0 +1,11 @@
+.aboutContainer {
+	padding: 8px;
+}
+
+.aboutContent {
+	p {
+		@media (max-width: 800px) {
+			font-size: 1em;
+		}
+	}
+}

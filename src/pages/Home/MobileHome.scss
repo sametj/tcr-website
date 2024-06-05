@@ -1,0 +1,28 @@
+.content-container {
+	@media (max-width: 800px) {
+		padding: 0;
+		height: 88%;
+	}
+}
+
+.homeContent {
+	img {
+		@media (max-width: 800px) {
+			width: 100%;
+			height: 40%;
+		}
+	}
+
+	h1 {
+		@media (max-width: 800px) {
+			margin-top: 60px;
+			font-size: 0.8em;
+		}
+	}
+
+	h2 {
+		@media (max-width: 800px) {
+			font-size: 1em;
+		}
+	}
+}

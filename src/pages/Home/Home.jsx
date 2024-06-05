@@ -1,4 +1,5 @@
 import "./Home.scss";
+import "./MobileHome.scss";
 
 const HomeContent = () => {
 	return (
@@ -13,4 +14,4 @@ const HomeContent = () => {
 	);
 };
 
-export default HomeContent
+export default HomeContent;

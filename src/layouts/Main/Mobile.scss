@@ -1,0 +1,93 @@
+.mobile-nav-bar {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	background-color: black;
+	height: 90dvh;
+	margin-top: 80px;
+	top: 0;
+	right: 0;
+	left: 0;
+	transition: all 0.2s ease-in-out;
+}
+
+.mobile-sub-nav {
+	display: flex;
+	flex-direction: column;
+	font-size: 16px;
+	margin-right: 40px;
+	color: var(--text-color);
+}
+
+.mobile-nav-item-hover {
+	display: flex;
+	flex-direction: column;
+	font-size: 26px;
+	text-decoration: none;
+	color: var(--text-color);
+	padding: 12px;
+}
+
+.mobile-sub-nav-item {
+	display: flex;
+	height: 50px;
+	flex-direction: column;
+	color: var(--text-color);
+	text-decoration: none;
+	padding: 12px;
+}
+
+.navBar {
+	@media (max-width: 800px) {
+		display: none;
+	}
+}
+
+.mainContainer {
+	@media (max-width: 800px) {
+		width: 100%;
+	}
+}
+.mainHeader {
+	.socialContainer {
+		@media (max-width: 800px) {
+			display: none;
+		}
+	}
+}
+
+.logoText {
+	@media (max-width: 800px) {
+	}
+	font-size: 12px;
+}
+
+.logoSubText {
+	@media (max-width: 800px) {
+	}
+	font-size: 12px;
+}
+
+.logoImage {
+	width: 50px;
+	height: 20px;
+}
+
+.mobile-hamburger {
+	background: transparent;
+	border: none;
+	order: 2;
+}
+
+.mobileNavHidden {
+	order: 1;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+}
+
+.subNavHidden {
+	height: 0;
+	width: 0;
+	overflow: hidden;
+}
