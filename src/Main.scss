@@ -52,6 +52,7 @@
 body {
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
+	font-family: "Formula1Regular";
 }
 /*
 	5. Improve media defaults
@@ -101,4 +102,22 @@ h6 {
 	border-bottom: 5px solid #2a38b4;
 	padding-bottom: 20px;
 	border-radius: 0;
+}
+
+.mobile-arrow {
+	border: none;
+	background-color: transparent;
+	margin: auto;
+	padding: 0 20px 0 20px;
+	color: white;
+}
+
+.mobile-button {
+	font-size: 14px;
+	font-weight: 900;
+	background: rgba(42, 56, 180, 1);
+	padding: 12px;
+	border: 2px solid #e6e6e6;
+	border-radius: var(--border-radius);
+	color: white;
 }

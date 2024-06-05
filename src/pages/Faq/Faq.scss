@@ -32,6 +32,7 @@
 
 .faq-content {
 	flex: 2;
+	display: flex;
 	background: linear-gradient(
 		180deg,
 		rgba(42, 56, 180, 0.4) 0%,
@@ -39,10 +40,15 @@
 	);
 	border: 1px solid rgba(218, 223, 232, 1);
 	width: 100%;
-	padding: 30px;
+	padding: 20px;
 	border-radius: var(--border-radius);
+	justify-content: center;
 }
 .faq-active {
 	background-color: rgba(218, 223, 232, 1);
 	color: rgba(42, 56, 180, 1);
+}
+
+.mobile-faq-buttons {
+	display: none;
 }
