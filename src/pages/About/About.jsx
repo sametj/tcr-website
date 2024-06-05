@@ -1,4 +1,5 @@
 import "./About.scss";
+import "./MobileAbout.scss";
 const About = () => {
 	return (
 		<div className='aboutContainer'>

@@ -1,6 +1,7 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classnames from "classnames";
+import React from "react";
 
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
@@ -9,13 +10,17 @@ import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faTwitch } from "@fortawesome/free-brands-svg-icons";
 import { faTiktok } from "@fortawesome/free-brands-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 import "./MainPage.scss";
 import "./Navbar.scss";
 import "./Logo.scss";
-import { Children } from "react";
+import "./Mobile.scss";
 
 const Header = () => {
+	const [menuActive, setMenuActive] = React.useState(false);
+
 	return (
 		<header className='mainHeader'>
 			<div className='logoContainer'>
@@ -32,6 +37,27 @@ const Header = () => {
 				</div>
 			</div>
 			<SocialMedia />
+			<button
+				onClick={() => setMenuActive(!menuActive)}
+				className='mobile-hamburger'>
+				{menuActive ? (
+					<FontAwesomeIcon
+						icon={faXmark}
+						size='2xl'
+						style={{ color: "#2a38b481" }}
+					/>
+				) : (
+					<FontAwesomeIcon
+						icon={faBars}
+						size='2xl'
+						style={{ color: "#2a38b481" }}
+					/>
+				)}
+			</button>
+			<MobileNav
+				menuActive={menuActive}
+				setMenuActive={setMenuActive}
+			/>
 		</header>
 	);
 };
@@ -150,8 +176,124 @@ const NavBar = () => {
 const Footer = () => {
 	return (
 		<footer className='footer'>
-			<NavBar />
+			<div className='desktop-nav'>
+				<NavBar />
+			</div>
+			<div className='footer-socials'>
+				<SocialMedia />
+			</div>
 		</footer>
+	);
+};
+
+const MobileNav = ({ menuActive, setMenuActive }) => {
+	const location = useLocation();
+
+	const [subMenu, setSubMenu] = React.useState(false);
+
+	const toggleSubMenu = () => {
+		if (menuActive === true) {
+			setSubMenu(!subMenu);
+		}
+	};
+
+	const closeMenu = () => {
+		setMenuActive(!menuActive);
+	};
+
+	const navItems = [
+		{
+			name: "Home",
+			to: "/",
+		},
+		{
+			name: "About",
+			to: "/about",
+		},
+		{
+			name: "Info",
+			to: "/info",
+			children: [
+				{
+					name: "Schedule",
+					to: "/info/schedule",
+				},
+				{
+					name: "FAQ",
+					to: "/info/faq",
+				},
+				{
+					name: "Stats",
+					to: "/info/stats",
+				},
+				{
+					name: "Rules",
+					to: "/info/rules",
+				},
+			],
+		},
+		// {
+		// 	name: "Shop",
+		// 	to: "https://gamersapparel.co.uk/store/trinity-competitive-racing",
+		// },
+	];
+
+	return (
+		<nav
+			className={classnames(
+				menuActive ? "mobile-nav-bar" : "mobileNavHidden"
+			)}>
+			{navItems.map((item, index) => {
+				if (item.children) {
+					return (
+						<Link
+							onClick={toggleSubMenu}
+							to={item.to}
+							key={index}
+							id={item.name}
+							className={classnames("mobile-nav-item-hover", {
+								mobileActive: location.pathname === item.to,
+							})}>
+							{item.name}
+							<div
+								className={classnames(
+									subMenu ? "mobile-sub-nav" : "subNavHidden"
+								)}>
+								{item.children.map((child, index) => (
+									<Link
+										onClick={closeMenu}
+										to={child.to}
+										key={index}
+										id={child.name}
+										className={classnames(
+											"mobile-sub-nav-item",
+											{
+												mobileActive:
+													location.pathname ===
+													child.to,
+											}
+										)}>
+										{child.name}
+									</Link>
+								))}
+							</div>
+						</Link>
+					);
+				}
+				return (
+					<Link
+						onClick={closeMenu}
+						to={item.to}
+						key={index}
+						id={item.name}
+						className={classnames("mobile-nav-item-hover", {
+							mobileactive: location.pathname === item.to,
+						})}>
+						{item.name}
+					</Link>
+				);
+			})}
+		</nav>
 	);
 };
 
