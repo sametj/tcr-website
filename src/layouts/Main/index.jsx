@@ -136,7 +136,7 @@ const NavBar = () => {
 							to={item.to}
 							key={index}
 							id={item.name}
-							className={classnames("nav-item-hover", {
+							className={classnames("nav-item-hover", "sub-nav-item", {
 								active: location.pathname === item.to,
 							})}>
 							{item.name}
@@ -162,7 +162,7 @@ const NavBar = () => {
 						to={item.to}
 						key={index}
 						id={item.name}
-						className={classnames("nav-item-hover", {
+						className={classnames("nav-item-hover", "sub-nav-item", {
 							active: location.pathname === item.to,
 						})}>
 						{item.name}
@@ -268,7 +268,7 @@ const MobileNav = ({ menuActive, setMenuActive }) => {
 										className={classnames(
 											"mobile-sub-nav-item",
 											{
-												mobileActive:
+												subNavActive:
 													location.pathname ===
 													child.to,
 											}
@@ -287,7 +287,7 @@ const MobileNav = ({ menuActive, setMenuActive }) => {
 						key={index}
 						id={item.name}
 						className={classnames("mobile-nav-item-hover", {
-							mobileactive: location.pathname === item.to,
+							mobileActive: location.pathname === item.to,
 						})}>
 						{item.name}
 					</Link>
