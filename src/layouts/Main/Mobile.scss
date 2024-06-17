@@ -26,6 +26,7 @@
 	text-decoration: none;
 	color: var(--text-color);
 	padding: 12px;
+
 }
 
 .mobile-sub-nav-item {
@@ -105,4 +106,12 @@
 	@media (max-width: 800px) {
 		display: flex;
 	}
+}
+
+.mobileActive {
+	color:#2a38b481;
+}
+
+.subNavActive {
+	@extend .mobileActive;
 }
