@@ -20,25 +20,20 @@ body {
 
 .content-container {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	align-items: center;
-	padding: var(--padding);
 	width: 100%;
-	height: 100%;
-	border: var(--border);
-	border-radius: var(--border-radius);
+	height: 80vh;
+	padding: var(--padding);
 }
 
 .mainHeader {
 	display: flex;
 	background-color: var(--navbar-color);
 	text-align: center;
-	font-size: 1em;
+	font-size: 1rem;
 	font-weight: bold;
 	justify-content: space-between;
 	align-items: center;
-
 	height: 90px;
 	padding: 0 20px;
 }
@@ -58,7 +53,7 @@ body {
 	flex-direction: column;
 	position: fixed;
 	width: 100%;
-	height: 65px;
+	height: 90px;
 	bottom: 0;
 	right: 0;
 	left: 0;
@@ -75,4 +70,11 @@ body {
 
 .footer-socials {
 	display: none;
+}
+
+@media screen and (max-height: 900px) {
+	.content-container {
+		margin-top: 100px;
+		height: 100%;
+	}
 }

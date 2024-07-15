@@ -1,3 +1,5 @@
+import ExcelViewer from "../../component/ExcelViewer/ExcelViewer";
+
 export const BUTTONS = [
 	{
 		buttonText: "Season Standing",
@@ -25,7 +27,7 @@ export const BUTTONS = [
 		subButtons: [
 			{
 				buttonText: "League Wide",
-				content: "test20",
+				content: <ExcelViewer />,
 			},
 			{
 				buttonText: "Silver Class",

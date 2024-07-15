@@ -5,7 +5,7 @@ const Schedule = () => {
 		<section className='scheduleContainer'>
 			<div className='scheduleContent'>
 				<img
-					src='/schedule.png'
+					src='/2024 Schedule TCR.png'
 					alt='schedule_Image'
 					className='schedule-image'
 				/>

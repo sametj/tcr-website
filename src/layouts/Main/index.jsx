@@ -31,9 +31,7 @@ const Header = () => {
 				/>
 				<div className='textContainer'>
 					<span className='logoText'>Trinity Competitive Racing</span>
-					<span className='logoSubText'>
-						Unlock your Racing Potential
-					</span>
+					<span className='logoSubText'>Unlock your Racing Potential</span>
 				</div>
 			</div>
 			<SocialMedia />
@@ -147,8 +145,7 @@ const NavBar = () => {
 										key={index}
 										id={child.name}
 										className={classnames("sub-nav-item", {
-											active:
-												location.pathname === child.to,
+											active: location.pathname === child.to,
 										})}>
 										{child.name}
 									</Link>
@@ -240,9 +237,7 @@ const MobileNav = ({ menuActive, setMenuActive }) => {
 
 	return (
 		<nav
-			className={classnames(
-				menuActive ? "mobile-nav-bar" : "mobileNavHidden"
-			)}>
+			className={classnames(menuActive ? "mobile-nav-bar" : "mobileNavHidden")}>
 			{navItems.map((item, index) => {
 				if (item.children) {
 					return (
@@ -265,14 +260,9 @@ const MobileNav = ({ menuActive, setMenuActive }) => {
 										to={child.to}
 										key={index}
 										id={child.name}
-										className={classnames(
-											"mobile-sub-nav-item",
-											{
-												mobileActive:
-													location.pathname ===
-													child.to,
-											}
-										)}>
+										className={classnames("mobile-sub-nav-item", {
+											mobileActive: location.pathname === child.to,
+										})}>
 										{child.name}
 									</Link>
 								))}

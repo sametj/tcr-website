@@ -1,7 +1,7 @@
 .scheduleContainer {
 	display: flex;
 	width: 100%;
-	height: 100%;
+	height: fit-content;
 	justify-content: center;
 	align-items: center;
 	padding: var(--padding);
@@ -9,4 +9,7 @@
 .schedule-image {
 	max-width: 100%;
 	margin: 0 auto;
+}
+
+.scheduleContent {
 }

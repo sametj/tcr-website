@@ -4,18 +4,20 @@
 	flex-direction: column;
 	background-color: black;
 	height: 90dvh;
-	margin-top: 80px;
+	margin-top: 120px;
 	top: 0;
 	right: 0;
 	left: 0;
+	gap: 20px;
 	transition: all 0.2s ease-in-out;
+	z-index: 100;
 }
 
 .mobile-sub-nav {
 	display: flex;
 	flex-direction: column;
 	font-size: 16px;
-	margin-right: 40px;
+	margin-top: 20px;
 	color: var(--text-color);
 }
 
@@ -70,10 +72,10 @@
 }
 
 .logoImage {
-	@media (max-width:800px){
+	@media (max-width: 800px) {
 		width: 50px;
 		height: 20px;
-		}
+	}
 }
 
 .mobile-hamburger {
@@ -104,5 +106,11 @@
 .footer-socials {
 	@media (max-width: 800px) {
 		display: flex;
+	}
+}
+
+.mainContainer {
+	@media (max-height: 800px) {
+		height: 90dvh;
 	}
 }

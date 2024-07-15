@@ -4,8 +4,15 @@
 
 .aboutContent {
 	p {
-		@media (max-width: 800px) {
-			font-size: 1em;
-		}
+		font-size: clamp(0.6rem, 2vw, 2rem);
+		text-align: center;
 	}
 }
+
+// .aboutContent {
+// 	p {
+// 		@media (max-height: 900px) {
+// 			font-size: 1rem;
+// 		}
+// 	}
+// }

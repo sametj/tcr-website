@@ -20,6 +20,7 @@
 
 .mobile-faq-buttons {
 	@media (max-width: 800px) {
-		display: block;
+		display: flex;
+		width: 100%;
 	}
 }

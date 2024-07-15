@@ -5,7 +5,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
 	root: "src/",
 	publicDir: "../public",
-	base: "/",
+	base: "./",
 	plugins: [react()],
 	server: {
 		host: true,
@@ -13,6 +13,7 @@ export default defineConfig({
 			"SANDBOX_URL" in process.env || "CODESANDBOX_HOST" in process.env
 		),
 	},
+
 	build: {
 		outDir: "../dist/",
 		emptyOutDir: true,

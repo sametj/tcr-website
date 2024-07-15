@@ -115,30 +115,32 @@ const Stats = () => {
 					))}
 				</div>
 				<div className='content'>
-					<div className='sub-stats-mobile-nav'>
-						<button
-							onClick={leftNavButtonClick}
-							className='mobile-arrow'>
-							<FontAwesomeIcon
-								icon={faLessThan}
-								size='2xl'
-								style={{ color: "#e6e6e6" }}
-							/>
-						</button>
+					<div className='mobile-box'>
+						<div className='sub-stats-mobile-nav'>
+							<button
+								onClick={leftNavButtonClick}
+								className='mobile-arrow'>
+								<FontAwesomeIcon
+									icon={faLessThan}
+									size='2xl'
+									style={{ color: "#e6e6e6" }}
+								/>
+							</button>
 
-						<span className='mobile-stats-button'>
-							{navButton.subButtons[activeIndex].buttonText}
-						</span>
+							<span className='mobile-stats-button'>
+								{navButton.subButtons[activeIndex].buttonText}
+							</span>
 
-						<button
-							onClick={rightNavButtonClick}
-							className='mobile-arrow'>
-							<FontAwesomeIcon
-								icon={faGreaterThan}
-								size='2xl'
-								style={{ color: "#e6e6e6" }}
-							/>
-						</button>
+							<button
+								onClick={rightNavButtonClick}
+								className='mobile-arrow'>
+								<FontAwesomeIcon
+									icon={faGreaterThan}
+									size='2xl'
+									style={{ color: "#e6e6e6" }}
+								/>
+							</button>
+						</div>
 					</div>
 					<div className='content-div'>
 						{navButton.subButtons[activeIndex].content}

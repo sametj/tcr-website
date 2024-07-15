@@ -6,20 +6,20 @@ import { faLessThan, faGreaterThan } from "@fortawesome/free-solid-svg-icons";
 
 const BUTTONS = [
 	{
-		buttonText: "All-Star Race",
-		content: "nush20",
+		buttonText: "Feature Race",
+		content: "/tcr-feature.png",
 	},
 	{
 		buttonText: "TCR-Grand Prix",
-		content: "nush30",
+		content: "/tcr-gp.png",
 	},
 	{
 		buttonText: "Pre-season Testing",
-		content: "nush40",
+		content: "/testing.png",
 	},
 	{
 		buttonText: "Teammate/Car Selection",
-		content: "nush50",
+		content: "/car-selection.png",
 	},
 ];
 
@@ -59,9 +59,7 @@ const Faq = () => {
 					/>
 				</button>
 
-				<span className='mobile-button'>
-					{BUTTONS[activeIndex].buttonText}
-				</span>
+				<span className='mobile-button'>{BUTTONS[activeIndex].buttonText}</span>
 
 				<button
 					onClick={rightButtonClick}
@@ -77,16 +75,19 @@ const Faq = () => {
 				{BUTTONS.map((btn, i) => (
 					<button
 						key={i}
-						className={`faq-button ${
-							activeIndex === i ? "faq-active" : ""
-						}`}
+						className={`faq-button ${activeIndex === i ? "faq-active" : ""}`}
 						onClick={() => handleButtonClick(i)}>
 						{btn.buttonText}
 					</button>
 				))}
 			</div>
 
-			<div className='faq-content'>{BUTTONS[activeIndex].content}</div>
+			<div className='faq-content'>
+				<img
+					src={BUTTONS[activeIndex].content}
+					alt={BUTTONS[activeIndex].buttonText}
+				/>
+			</div>
 		</section>
 	);
 };

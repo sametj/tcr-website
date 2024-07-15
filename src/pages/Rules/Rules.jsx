@@ -1,16 +1,15 @@
+import PdfViewer from "./PdfViewer";
 import "./Rules.scss";
 
+import { pdfjs } from "react-pdf";
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+	"pdfjs-dist/build/pdf.worker.min.mjs",
+	import.meta.url
+).toString();
+
 const Rules = () => {
-	return (
-		<div className='rules-container'>
-			<div className='rules-Content'>
-				<img
-					src='/rules.png'
-					alt='rules_Image'
-				/>
-			</div>
-		</div>
-	);
+	// return <PdfViewer file='/Rules.pdf' />;
 };
 
 export default Rules;
